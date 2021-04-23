@@ -36,14 +36,6 @@ async function post_list(req, res) {
 }
 async function find_post(req, res) {
   try {
-    console.log(
-      "la info recopilada es: ",
-      delete_image(
-        path.normalize(
-          "C:\\Users\\laguna\\Documents\\javascript-proyects\\Challenge Alkemi\\node-CRUD\\public\\upload\\img\\117226856_1209112669422552_5147065768592795238_n.jpg"
-        )
-      )
-    );
     const data = await db.query(
       `SELECT * FROM post WHERE id = ${req.params.id}`
     );
